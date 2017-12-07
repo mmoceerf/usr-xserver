@@ -83,6 +83,10 @@ static int ms_box_area(BoxPtr box)
     return (int)(box->x2 - box->x1) * (int)(box->y2 - box->y1);
 }
 
+#ifndef DPMSModeOn
+#define DPMSModeOn	0
+#endif
+
 Bool
 ms_crtc_on(xf86CrtcPtr crtc)
 {
